@@ -10,7 +10,8 @@
 		"@types/react": "^16.0.21",
 		"@types/react-native": "^0.50.2",
 		"react": "16.0.0",
-		"react-native": "0.50.2"
+		"react-native": "0.50.2",
+		"tslint": "^5.8.0"
 	},
 	"devDependencies": {
 		"babel-jest": "21.2.0",

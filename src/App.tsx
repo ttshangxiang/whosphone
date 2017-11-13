@@ -10,7 +10,9 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  StatusBar,
+  ImageBackground
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -23,17 +25,20 @@ const instructions = Platform.select({
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+      <ImageBackground source={require('./images/bg1.jpeg')}>
+        <View style={styles.container}>
+          <StatusBar hidden={true} />
+          <Text style={styles.welcome}>
+            Welcome to React Native!
+          </Text>
+          <Text style={styles.instructions}>
+            To get started, edit App.js
+          </Text>
+          <Text style={styles.instructions}>
+            {instructions}
+          </Text>
+        </View>
+      </ImageBackground>
     );
   }
 }
