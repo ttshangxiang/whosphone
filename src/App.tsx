@@ -25,19 +25,17 @@ const instructions = Platform.select({
 export default class App extends Component<{}> {
   render() {
     return (
-      <ImageBackground source={require('./images/bg1.jpeg')}>
-        <View style={styles.container}>
-          <StatusBar hidden={true} />
-          <Text style={styles.welcome}>
-            Welcome to React Native!
-          </Text>
-          <Text style={styles.instructions}>
-            To get started, edit App.js
-          </Text>
-          <Text style={styles.instructions}>
-            {instructions}
-          </Text>
-        </View>
+      <ImageBackground style={styles.container} source={require('./images/bg1.jpeg')} resizeMode='cover'>
+        <StatusBar hidden={true} />
+        <Text style={styles.welcome}>
+          Welcome to React Native!
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit App.js
+        </Text>
+        <Text style={styles.instructions}>
+          {instructions}
+        </Text>
       </ImageBackground>
     );
   }
@@ -46,18 +44,19 @@ export default class App extends Component<{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: 'center',
+    backgroundColor:'rgba(0,0,0,0)',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    color: '#fff',
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#eee',
     marginBottom: 5,
   },
 });
